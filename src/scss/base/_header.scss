@@ -1,0 +1,142 @@
+header {
+    background: linear-gradient(180deg,#f3f4f6,#fff);
+    width: 100%;
+    height: 700px;
+    position: relative;
+    
+    @include tablet{
+        height: 625px;
+    }
+}
+
+.contenedor-header{
+    
+    
+    .primero{
+        
+        max-width: 35rem;
+        margin: 0 auto;
+        position: absolute;
+        text-align: center;
+        top: 300px;
+        left: 10px;
+        right: 10px;
+
+        @include tablet{
+            margin: 0 0;
+            max-width: 40rem;
+            text-align: start;
+            position: absolute;
+            top: 150px;
+            left: 70px;
+            right: none;
+        }
+
+        h1{
+            font-size: 3rem;
+            line-height: 4rem;
+            font-weight: bold;
+
+            @include tablet{
+                font-size: 4rem;
+            }
+        
+
+        }
+        p{
+            font-size: 2rem;
+            line-height: 2.5rem;
+
+            font-weight: bold;
+            color: $Grayish-Blue;
+        }
+    }
+
+
+    .segundo-contenido{
+        
+
+        .imagen-mockup{
+            display: none;
+            @include tablet{
+                display: block;
+                width: 350px;
+                height: 600px;
+                object-position: 8% 70%;
+                position: absolute;
+                top: 0px;
+                right: 0px;
+                object-fit: none;
+                z-index: 1;                
+            }
+
+            @include desktop{
+                width: 700px;
+           
+            }
+
+        }
+    }
+
+    .imagen-telefono{
+        z-index: 1;
+
+        height: 285px;
+        width: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        object-position: -32% 100%;
+
+        @include tablet{
+        
+            width: 400px;
+            height: 700px;
+            object-position: -32% 100%;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            z-index: 2;
+            object-fit: none;            
+        }
+
+        @include desktop{
+            width: 550px;
+            height: 700px;
+        }
+
+    }
+}
+
+.mockup-mobil{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 285px;
+    object-fit: cover;
+    object-position: 0px 55%;
+
+    @include tablet{
+        display: none;
+    }
+}
+
+.boton-request-mobile{
+    background: linear-gradient(to right, $Lime-Green, $Bright-Cyan);
+    width: 15rem;
+    margin: 0 auto;
+    padding: 1rem;
+    border-radius: 1.6rem;
+    font-size: 2rem;
+   
+    a{
+        color: $White;
+        font-weight: bold;
+    }
+
+    @include tablet{
+        margin: 0 0;
+    }
+}

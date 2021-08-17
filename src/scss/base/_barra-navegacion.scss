@@ -1,0 +1,140 @@
+
+
+.contenido-barra{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 3rem;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    .icono-hamburguesa{
+        width: 4rem;
+
+        @include tablet{
+            display: none;
+        }
+    }
+
+
+}  
+.boton-request{
+    background: linear-gradient(to right, $Lime-Green, $Bright-Cyan);
+    width: 15rem;
+    padding: 1rem;
+    border-radius: 1.6rem;
+    display: none;
+
+    @include tablet{
+        display: block;
+    }
+
+
+    a{
+        display: flex;
+        justify-content: center;
+        font-size: 1.8rem;
+        color: $White;
+        font-weight: $gruesa;
+    }
+  
+}  
+
+.navegacion-mobile{
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    background-color: $White;
+    width: 300px;
+    height: 300px; 
+    margin: 0 auto;
+    position: absolute;
+    z-index: 10;
+    justify-content: center;
+    top: 200px;
+ 
+    right: 0;
+    left: 0;
+    opacity: 0;
+    border-radius: 1rem;
+    -webkit-box-shadow: 0 8px 10px 1px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.3);
+    box-shadow: 0 8px 10px 1px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(126, 58, 58, 0.3);
+
+
+    @include tablet{
+        display: none;
+        opacity: 0;
+    }
+    a{
+
+        
+        font-size: 3rem;
+        margin-bottom: 1.5rem;
+        padding: 1rem;
+        text-align: center;
+
+        font-weight: $gruesa;
+        transition: all .4s ease-in-out;
+        &:hover{
+            background: linear-gradient(to right, $Lime-Green, $Bright-Cyan);
+            color: $White;
+
+        }
+    }
+}
+.mostrar{
+    transition: all .5s ease-in-out;
+    visibility: visible;
+    opacity: 1;
+    
+}
+.navegacion{
+        visibility: hidden;
+        @include tablet{
+            visibility: visible;
+        }
+        a{
+            font-size: 1.6rem;
+            margin-right: 1.5rem;
+        
+            font-weight: $gruesa;
+            position: relative;
+            padding-bottom: 2.5rem;
+    
+            &:before{
+                content: "";
+                display: block;
+                margin: 0; 
+                width: 0;
+                height: 5px;
+                
+                background: linear-gradient(to right, $Lime-Green, $Bright-Cyan);
+                position: absolute;
+                bottom: 0;
+                transition: all .3s;
+            }
+
+            &:hover:before{
+                width: 100%;
+            }
+        }
+        a{
+            &:before{
+                left: 50%;
+            }
+            &:hover:before{
+                left: 0;
+            }
+    }
+}
+.navegacion-barra{
+    transition: all .3s ease-in-out;
+}
+
+.fijo{
+    position: fixed;
+    width: 100%;
+    background-color: $White;
+    box-shadow: 0 .3rem .4rem #444;
+}
