@@ -1,0 +1,10 @@
+
+
+
+
+*.json
+/node_modules
+/build
+/.vscode
+/deployment
+/deployment2
